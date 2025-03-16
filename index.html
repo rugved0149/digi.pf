@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rugved Suryawanshi - Portfolio</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="star.css"> <!-- Link the CSS for the star animation -->
+</head>
+<body class="home-page">
+    
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="ach.html">Achievements</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="fade-in">
+        <div class="hero-content slide-up">
+            <h1>Hi, I'm <span class="highlight">Rugved Suryawanshi</span></h1>
+            <p class="inspiring-quote">An engineering student passionate about data science, web development, and logical problem-solving. <br>
+                Enthusiast of history, psychology, politics, and geopolitics, always eager to analyze and explore deeper perspectives.</p>
+            <img src="me.jpeg" alt="Rugved Suryawanshi" class="profile-img zoom-in">
+        </div>
+    </section>
+    
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rugved Suryawanshi. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="home.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="star.js"></script> <!-- Link the JS for the star animation -->
+    <style>
+        /* Ensure footer is at the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 10px;
+            background: black;
+        }
+
+        /* Fix theme button size */
+        .theme-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: cyan;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .profile-img {
+            max-width: 200px; /* Adjust the image size */
+            max-height: 200px; /* Limit the height */
+            border-radius: 50%; /* Make the image circular */
+            object-fit: cover;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Scroll adjustment */
+        #hero {
+            padding-bottom: 20px; /* Space for the footer */
+        }
+    </style>
+</body>
+</html>
