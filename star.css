@@ -1,0 +1,45 @@
+/* star-animation.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh; /* Ensure full screen height */
+    position: relative;
+}
+
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: starAnimation 1.5s infinite, twinkle 1.5s infinite alternate;
+    opacity: 0;
+}
+
+/* Animation for the stars */
+@keyframes starAnimation {
+    0% {
+        transform: scale(0) translate(0, 0); /* Start at the cursor with small scale */
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) translate(20px, -20px); /* Move slightly outward from the cursor */
+        opacity: 0;
+    }
+}
+
+/* Twinkling effect */
+@keyframes twinkle {
+    0% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}

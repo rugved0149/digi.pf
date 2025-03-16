@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Sticky Navbar */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sticky-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.sticky-nav ul li a:hover {
+    color: cyan;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('background.jpg') no-repeat center center/cover;
+    overflow: hidden; /* Ensure the hero section is properly confined */
+    padding: 0 20px; /* Add some padding to avoid image overflow */
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.highlight {
+    color: cyan;
+    font-weight: bold;
+}
+
+.profile-img {
+    max-width: 200px; /* Limit the width */
+    max-height: 200px; /* Limit the height */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.profile-img:hover {
+    transform: scale(1.1); /* Slightly zooms the image on hover */
+}
+
+/* Fade in the entire hero section */
+#hero {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
+}
+
+/* Slide up the hero content */
+.hero-content {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slide-up 1.2s ease-out forwards 0.5s;
+}
+
+/* Pop in the name text */
+.hero-content h1 {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: pop-in 0.8s ease-out forwards 1s;
+}
+
+/* Fade in the quote smoothly */
+.inspiring-quote {
+    opacity: 0;
+    animation: fade-in-quote 1.5s ease-in-out forwards 1.5s;
+}
+
+/* Zoom in the profile image */
+.profile-img {
+    transform: scale(0.8);
+    opacity: 0;
+    animation: zoom-in 1s ease-out forwards 1.3s;
+}
+
+/* Keyframes for animations */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-up {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pop-in {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fade-in-quote {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoom-in {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Profile Image */
+.me-img {
+    width: 100px; /* Adjust the width to make it smaller */
+    height: 100px; /* Ensure the height matches the width for a perfect circle */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area without distortion */
+    border: 2px solid #fff; /* Optional: Adds a white border around the image */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: black;
+    color: wheat
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Particle Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+}

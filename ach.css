@@ -1,0 +1,118 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sticky Navbar */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.sticky-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sticky-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.sticky-nav ul li a:hover {
+    color: cyan;
+}
+
+/* Achievement Section */
+#achievement-container {
+    padding-top: 100px; /* Added space to avoid overlap with fixed navbar */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 60vh; /* Ensure content section takes up some height */
+}
+
+.card {
+    background: #1a1a1a;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 70%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.view-cert {
+    background-color: cyan;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-cert:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: black;
+    color: white;
+    text-align: center;
+    position: relative; /* Ensure footer does not overlap */
+    margin-top: auto; /* Footer stays at the bottom */
+    clear: both; /* Ensures footer is at the bottom */
+}
+
+/* Particle Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
